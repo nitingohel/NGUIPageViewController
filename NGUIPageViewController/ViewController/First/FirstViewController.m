@@ -13,7 +13,7 @@
 @end
 
 @implementation FirstViewController
-
+@synthesize delegate;
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
@@ -22,6 +22,12 @@
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+- (IBAction)Next:(UIButton *)sender {
+    
+    if([self.delegate respondsToSelector:@selector(ChangeDirectonTopage:direction:)]) {
+        [self.delegate ChangeDirectonTopage:1 direction:UIPageViewControllerNavigationDirectionForward];
+    }
 }
 
 /*

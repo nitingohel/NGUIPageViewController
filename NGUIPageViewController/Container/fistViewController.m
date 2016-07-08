@@ -7,11 +7,14 @@
 //
 
 #import "fistViewController.h"
+#import "FirstViewController.h"
+#import "SecondViewController.h"
+#import "ThirdViewController.h"
+#import "FourthViewController.h"
+
+
 @interface fistViewController ()
-@property (nonatomic, retain) UIViewController *first;
-@property (nonatomic, retain) UIViewController *second;
-@property (nonatomic, retain) UIViewController *third;
-@property (nonatomic, retain) UIViewController *fourth;
+
 @property (strong, nonatomic) IBOutlet UIButton *btnChange;
 @property (strong, nonatomic) NSMutableArray *arrViewControllers;
 
@@ -55,20 +58,48 @@
 - (UIViewController *)ViewController:(NSString*)identifire {
     
         UIStoryboard *sb = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
-        UIViewController *vc = [sb instantiateViewControllerWithIdentifier:identifire];
     
-    return vc;
+    if([identifire isEqualToString:@"FirstViewController"])
+    {
+        FirstViewController *vc = [sb instantiateViewControllerWithIdentifier:identifire];
+        vc.delegate=self;
+        
+        return vc;
+    }
+    else if([identifire isEqualToString:@"SecondViewController"])
+    {
+        SecondViewController *vc = [sb instantiateViewControllerWithIdentifier:identifire];
+         vc.delegate=self;
+        return vc;
+    }
+    else if([identifire isEqualToString:@"ThirdViewController"])
+    {
+        ThirdViewController *vc = [sb instantiateViewControllerWithIdentifier:identifire];
+         vc.delegate=self;
+        return vc;
+    }
+    else
+    {
+    
+        FourthViewController *vc = [sb instantiateViewControllerWithIdentifier:identifire];
+         vc.delegate=self;
+        return vc;
+
+
+    }
 }
 
 
 - (IBAction)changePage:(UIButton *)sender {
     
-    UIViewController *jumpTo = [self ChangePageToJump:4];
+    UIViewController *jumpTo = [self ChangePageToJump:3];
     
     [self.pageViewController setViewControllers:@[jumpTo]
                    direction:UIPageViewControllerNavigationDirectionForward
                     animated:YES
-                  completion:nil];}
+                  completion:nil];
+
+}
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
@@ -85,6 +116,7 @@
         return nil;
     
     UIViewController *cVC = [self.arrViewControllers objectAtIndex:currentIndex + 1];
+    
     return cVC;
 }
 
@@ -103,7 +135,7 @@
 
 -(UIViewController*)ChangePageToJump:(NSUInteger)PageIndex
 {
-    PageIndex--;
+   
     if(PageIndex < self.arrViewControllers.count)
     {
         UIViewController  *vc = [self.arrViewControllers objectAtIndex:PageIndex];
@@ -118,4 +150,16 @@
 
 }
 
+#pragma mark - custom delegate
+
+-(void)ChangeDirectonTopage:(NSUInteger)index direction:(UIPageViewControllerNavigationDirection)direction
+{
+    UIViewController *jumpTo = [self ChangePageToJump:index];
+    
+    [self.pageViewController setViewControllers:@[jumpTo]
+                                      direction:direction
+                                       animated:YES
+                                     completion:nil];
+
+}
 @end

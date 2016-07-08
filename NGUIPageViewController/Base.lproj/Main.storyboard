@@ -2,9 +2,10 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="Ndk-Yl-GFv">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
-        <!--Fist View Controller-->
+        <!--OBJECTIVE-C-->
         <scene sceneID="AnF-8l-F14">
             <objects>
                 <viewController storyboardIdentifier="fistViewController" id="zEN-m4-8XZ" customClass="fistViewController" sceneMemberID="viewController">
@@ -19,13 +20,13 @@
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="tech.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="vDL-G9-eJS">
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xMX-Ss-L6d">
+                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xMX-Ss-L6d">
                                 <rect key="frame" x="248" y="521" width="105" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="105" id="NQi-e4-Rer"/>
                                     <constraint firstAttribute="height" constant="30" id="SfU-X0-5jr"/>
                                 </constraints>
-                                <state key="normal" title="Change">
+                                <state key="normal" title="Change page">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
@@ -43,7 +44,7 @@
                             <constraint firstItem="vDL-G9-eJS" firstAttribute="height" secondItem="jnN-qh-kpn" secondAttribute="height" id="qi1-sC-W6x"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="Oog-Cb-Iep"/>
+                    <navigationItem key="navigationItem" title="OBJECTIVE-C" id="Oog-Cb-Iep"/>
                     <connections>
                         <outlet property="btnChange" destination="xMX-Ss-L6d" id="2lk-st-Ogn"/>
                     </connections>
@@ -71,14 +72,28 @@
                                     <constraint firstAttribute="height" constant="21" id="gLD-Oh-pyX"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EAk-tv-DRQ">
+                                <rect key="frame" x="506" y="526" width="46" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="46" id="xz2-66-s71"/>
+                                </constraints>
+                                <state key="normal" title="Next">
+                                    <color key="titleColor" red="0.7843137255" green="0.050980392159999999" blue="0.10980392160000001" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="Next:" destination="p4b-zA-Tyl" eventType="touchUpInside" id="buE-VL-igR"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="b1H-5K-90K" firstAttribute="centerX" secondItem="E9R-FB-cg5" secondAttribute="centerX" id="Du9-Ro-hf6"/>
                             <constraint firstItem="b1H-5K-90K" firstAttribute="centerY" secondItem="E9R-FB-cg5" secondAttribute="centerY" constant="-12.5" id="Nj9-eb-GzI"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="EAk-tv-DRQ" secondAttribute="trailing" constant="28" id="fUr-uU-DBi"/>
+                            <constraint firstItem="UMU-D7-rEj" firstAttribute="top" secondItem="EAk-tv-DRQ" secondAttribute="bottom" constant="44" id="xua-aq-0bS"/>
                         </constraints>
                     </view>
                 </viewController>
@@ -105,14 +120,42 @@
                                     <constraint firstAttribute="width" constant="153" id="OW2-xf-nFc"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="16n-kL-k0F">
+                                <rect key="frame" x="522" y="550" width="46" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="46" id="blm-8r-zne"/>
+                                </constraints>
+                                <state key="normal" title="Next">
+                                    <color key="titleColor" red="0.7843137255" green="0.050980392159999999" blue="0.10980392160000001" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="NExt:" destination="IP6-ip-Kq1" eventType="touchUpInside" id="8pG-eW-bCA"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jKE-it-j6V">
+                                <rect key="frame" x="38" y="544" width="83" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="83" id="ekg-4H-bCi"/>
+                                </constraints>
+                                <state key="normal" title="Previous">
+                                    <color key="titleColor" red="0.7843137255" green="0.050980392159999999" blue="0.10980392160000001" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="previous:" destination="IP6-ip-Kq1" eventType="touchUpInside" id="tmS-xU-SPp"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="jKE-it-j6V" firstAttribute="leading" secondItem="jAK-U4-MJC" secondAttribute="leadingMargin" constant="18" id="9Gr-QX-MFG"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="16n-kL-k0F" secondAttribute="trailing" constant="12" id="LkG-Rz-ZFX"/>
                             <constraint firstItem="XfY-Lz-72B" firstAttribute="centerY" secondItem="jAK-U4-MJC" secondAttribute="centerY" id="Tae-we-ykG"/>
+                            <constraint firstAttribute="bottom" secondItem="16n-kL-k0F" secondAttribute="bottom" constant="20" symbolic="YES" id="kdb-gZ-Vas"/>
                             <constraint firstItem="XfY-Lz-72B" firstAttribute="centerX" secondItem="jAK-U4-MJC" secondAttribute="centerX" id="lVU-JO-XDm"/>
+                            <constraint firstItem="WeB-11-KcR" firstAttribute="top" secondItem="jKE-it-j6V" secondAttribute="bottom" constant="26" id="rcb-8y-Zst"/>
                         </constraints>
                     </view>
                 </viewController>
@@ -139,14 +182,42 @@
                                     <constraint firstAttribute="height" constant="21" id="zqR-Pi-gwr"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eju-0m-ZHr">
+                                <rect key="frame" x="534" y="550" width="46" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="46" id="8hE-2Y-IDW"/>
+                                </constraints>
+                                <state key="normal" title="Next">
+                                    <color key="titleColor" red="0.7843137255" green="0.050980392159999999" blue="0.10980392160000001" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="Next:" destination="upg-Ix-aN2" eventType="touchUpInside" id="guZ-sI-mzv"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fdA-Zu-SF8">
+                                <rect key="frame" x="20" y="550" width="92" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="92" id="Ely-fE-QhL"/>
+                                </constraints>
+                                <state key="normal" title="Previous">
+                                    <color key="titleColor" red="0.7843137255" green="0.050980392159999999" blue="0.10980392160000001" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="Previous:" destination="upg-Ix-aN2" eventType="touchUpInside" id="eRW-bR-K6b"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="fdA-Zu-SF8" firstAttribute="baseline" secondItem="eju-0m-ZHr" secondAttribute="baseline" id="Baq-Dt-FGv"/>
+                            <constraint firstItem="eju-0m-ZHr" firstAttribute="trailing" secondItem="MnO-Cf-qhS" secondAttribute="trailingMargin" id="dBT-ds-2Xe"/>
+                            <constraint firstAttribute="bottom" secondItem="fdA-Zu-SF8" secondAttribute="bottom" constant="20" symbolic="YES" id="e3m-bL-wKL"/>
                             <constraint firstItem="HPP-7C-l7U" firstAttribute="centerX" secondItem="MnO-Cf-qhS" secondAttribute="centerX" id="iI0-EU-rnM"/>
                             <constraint firstItem="HPP-7C-l7U" firstAttribute="centerY" secondItem="MnO-Cf-qhS" secondAttribute="centerY" id="tCY-XD-52L"/>
+                            <constraint firstItem="fdA-Zu-SF8" firstAttribute="leading" secondItem="MnO-Cf-qhS" secondAttribute="leadingMargin" id="wRY-XA-Rm0"/>
                         </constraints>
                     </view>
                 </viewController>
@@ -173,14 +244,28 @@
                                     <constraint firstAttribute="height" constant="21" id="Mwy-oN-DG5"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yUP-Q9-pk6">
+                                <rect key="frame" x="20" y="550" width="46" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="46" id="13g-GK-trU"/>
+                                </constraints>
+                                <state key="normal" title="Back">
+                                    <color key="titleColor" red="0.7843137255" green="0.050980392159999999" blue="0.10980392160000001" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="Back:" destination="3dN-H5-38R" eventType="touchUpInside" id="EVw-iu-DVp"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstAttribute="bottom" secondItem="yUP-Q9-pk6" secondAttribute="bottom" constant="20" symbolic="YES" id="Bnt-pn-nZ0"/>
                             <constraint firstItem="GHx-Tk-ssc" firstAttribute="centerY" secondItem="pcR-JH-nzy" secondAttribute="centerY" id="YE9-ye-kic"/>
                             <constraint firstItem="GHx-Tk-ssc" firstAttribute="centerX" secondItem="pcR-JH-nzy" secondAttribute="centerX" id="cZH-Nr-Jmz"/>
+                            <constraint firstItem="yUP-Q9-pk6" firstAttribute="leading" secondItem="pcR-JH-nzy" secondAttribute="leadingMargin" id="qyi-Su-Tvm"/>
                         </constraints>
                     </view>
                 </viewController>

@@ -13,7 +13,7 @@
 @end
 
 @implementation FourthViewController
-
+@synthesize delegate;
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
@@ -22,6 +22,11 @@
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+- (IBAction)Back:(UIButton *)sender {
+    if([self.delegate respondsToSelector:@selector(ChangeDirectonTopage:direction:)]) {
+        [self.delegate ChangeDirectonTopage:2 direction:UIPageViewControllerNavigationDirectionReverse];
+    }
 }
 
 /*

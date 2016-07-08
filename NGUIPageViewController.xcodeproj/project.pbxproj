@@ -44,6 +44,7 @@
 		4629C4851D2E7294008829B8 /* ThirdViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ThirdViewController.h; sourceTree = "<group>"; };
 		4629C4861D2E7294008829B8 /* ThirdViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ThirdViewController.m; sourceTree = "<group>"; };
 		467C164E1D1AA56C0046D742 /* NGUIPageViewController.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NGUIPageViewController.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		468939711D2FDE9B00C220BA /* CustomDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomDelegate.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,6 +80,7 @@
 			children = (
 				4629C46A1D2E7294008829B8 /* AppDelegate.h */,
 				4629C46B1D2E7294008829B8 /* AppDelegate.m */,
+				468939711D2FDE9B00C220BA /* CustomDelegate.h */,
 			);
 			path = AppDelegate;
 			sourceTree = "<group>";

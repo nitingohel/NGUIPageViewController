@@ -7,7 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-
+#import "CustomDelegate.h"
 @interface ThirdViewController : UIViewController
-
+@property (nonatomic,assign) id<CustomDelegate> delegate;
 @end

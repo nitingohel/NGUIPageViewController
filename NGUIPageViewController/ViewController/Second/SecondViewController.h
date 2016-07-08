@@ -7,7 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-
+#import "CustomDelegate.h"
 @interface SecondViewController : UIViewController
-
+@property (nonatomic,assign) id<CustomDelegate> delegate;
 @end

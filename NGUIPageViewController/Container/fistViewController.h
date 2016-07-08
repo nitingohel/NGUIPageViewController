@@ -7,7 +7,13 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "CustomDelegate.h"
 
-@interface fistViewController : UIViewController<UIPageViewControllerDataSource>
+
+@interface fistViewController : UIViewController<UIPageViewControllerDataSource, CustomDelegate>
+{
+
+}
 @property (strong, nonatomic) UIPageViewController *pageViewController;
+
 @end
